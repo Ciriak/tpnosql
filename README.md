@@ -52,3 +52,19 @@ et 2005**
 
 **7) Créez une collection recordLabel, qui puisse stocker maximum 3 documents ou 1 KB
 et dont la structure doit être : (voir PDF)**
+
+**8) Insérez les 3 registres dans la collection. Qu’est­ce qui se passe lorsque vous
+essayez insérer un 4ème ?**
+
+**9) Modifiez le validator sur la collection afin d’ajouter le pays en utilisant le code (ISO
+3166­1 alpha­2)**
+
+**10) Pour allez plus loin**
+- a. Qu’est ce que le TTL ?
+- b. Quelles sont les modifications à faire sur une collection pour rajouter du TTL
+?
+- c. Si vous devez faire cette manipulation sur la collection recordLabel, il faudrait
+faire quoi exactement ?
+- d. Créez une nouvelle collection recordLabel2, avec le même validator, mais
+avec une TTL sur les documents de 10 secondes.
+
