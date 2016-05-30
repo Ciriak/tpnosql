@@ -100,8 +100,18 @@ essayez insérer un 4ème ?**
 
 **10) Pour allez plus loin**
 - a. Qu’est ce que le TTL ?
+
+Le TTL est un délais d'expiration pour les données (time to live)
+
 - b. Quelles sont les modifications à faire sur une collection pour rajouter du TTL
 ?
+
+Il faut rajouter un index et spécifier le TTL
+
+```
+db.log_events.createIndex( { "createdAt": 1 }, { expireAfterSeconds: 3600 } )
+```
+
 - c. Si vous devez faire cette manipulation sur la collection recordLabel, il faudrait
 faire quoi exactement ?
 - d. Créez une nouvelle collection recordLabel2, avec le même validator, mais
