@@ -37,15 +37,54 @@ mongoimport --db dbname --collection music --drop --file mymusic/songs.metadata.
 
 **1) Affichez les documents de la collection songs.**
 
+```
+show collections
+```
+
 **2) Comptez le nombre de documents existants dans la collection songs.**
 
+```
+db.songs.count()
+```
+
 **3) Affichez exclusivement les titres des chansons du Coldplay de l’album X&Y**
+
+```
+db.songs.find(
+   {
+     artist: "Coldplay",
+     album: "X&Y"
+   },
+   { title: 1 }
+)
+```
 
 **4) Affichez le titre et album des chansons de Stromae, ordonnés par année de la plus
 récente à la plus ancienne, et triés par ordre alphabétique par titre**
 
+```
+db.songs.find(
+   {
+     artist: "Stromae"
+   },
+   { title: 1,
+    album:1}
+).sort({
+  year : 1
+})
+```
+
 **5) Affichez les chansons du group Coldplay dans un tableau, où les éléments sont des
 strings ayant comme format TITRE (ALBUM). La sortie doit être comme ça : (voir PDF)**
+
+```
+db.songs.find(
+   {
+     artist: "Coldplay",
+     album: "X&Y"
+   }
+)
+```
 
 **6) Affichez, une seule fois, le noms des artistes ayant produit des chansons entre 2002
 et 2005**
